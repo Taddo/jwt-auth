@@ -54,6 +54,16 @@ class JWTAuth extends JWT
         return $this->fromUser($this->user());
     }
 
+     /**
+     * Authenticate a user via a token, without credential (test)
+     *
+     * @return \Tymon\JWTAuth\Contracts\JWTSubject|false
+     */
+    public function get()
+    {
+        return $this->fromUser($this->user());
+    }
+    
     /**
      * Authenticate a user via a token.
      *
